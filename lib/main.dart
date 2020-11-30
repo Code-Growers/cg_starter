@@ -95,7 +95,7 @@ class App extends StatelessWidget {
           },
         );
       },
-      title: 'Rafi',
+      title: 'CodeGrowers',
       theme: mainTheme,
       initialRoute: describeEnum(Routes.home),
       navigatorKey: appNavigatorKey,
