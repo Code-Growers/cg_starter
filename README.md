@@ -66,9 +66,9 @@ Before first start you need to run:
 - [Shimmer](https://pub.dev/packages/shimmer) - An easy way to add shimmer effect. Much fancier than showing ugly spinning loader or anything else.
 - [Gap](https://pub.dev/packages/gap) - Go to solution for making layout more readable using easy to use whitespace widgets.
 - [Flutter screen utils](https://pub.dev/packages/flutter_screenutil) - Recommended solution to make flutter apps responsive to have that pixel perfect app.
-- [Network image](https://pub.dev/packages/cached_network_image) - Show images from the internet and keep them in the cache directory. When loading assets from an internet this is a go to solution.
+- [Cached network image](https://pub.dev/packages/cached_network_image) - Show images from the internet and keep them in the cache directory. When loading assets from an internet this is a go to solution.
 - [Flutter conditional rendering](https://pub.dev/packages/flutter_conditional_rendering) - Stop ugly if statements inside of our UI with this readable conditional rendering widgets.
-- [Flash](https://pub.dev/packages/flash) - Because it's always good to have a nice way to display that snackbar to user.
+- [Flutter toast](https://pub.dev/packages/fluttertoast) - Because it's always good to have a nice way to display that toast to user from anywhere.
 - [Simple animations](https://pub.dev/packages/simple_animations) - It's always good to save time when doing simple animations.
 
 #### Serialization
@@ -82,11 +82,12 @@ Before first start you need to run:
 - [Device info](https://pub.dev/packages?q=device_info) - Because it is always useful to have that knowledge about users device.
 - [Equatable](https://pub.dev/packages/equatable) - Let's make equality checking easy again inside of our little immutable world.
 - [Dartx](https://pub.dev/packages/dartx) - These extensions can and will save you a lot of time.
+- [Dart extensions](https://pub.dev/packages/dart_extensions) - Because there is never enough of extension libraries.
 - [Uuid](https://pub.dev/packages/uuid) - Never use dirty old math.random when in need of unique values.
 
 #### Logging
 
-- [Logger](https://pub.dev/packages/logger) - Lets make that logging pretty.
+- [Lognito](https://github.com/Code-Growers/lognito) - Lets make that logging pretty.
 
 #### Localization
 
