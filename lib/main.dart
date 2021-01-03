@@ -14,6 +14,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_i18n/flutter_i18n_delegate.dart';
 import 'package:flutter_i18n/loaders/namespace_file_translation_loader.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Future<bool> isIpad() async {
   try {
@@ -75,31 +76,35 @@ class App extends StatelessWidget {
         services.DeviceOrientation.portraitDown,
       ]);
     }
-    return MaterialApp(
-      locale: DevicePreview.of(context).locale,
-      localizationsDelegates: <LocalizationsDelegate<dynamic>>[
-        flutterI18nDelegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
-      ],
-      builder: (BuildContext context, Widget child) {
-        return BlocBuilder<AppBloc, AppState>(
-          builder: (BuildContext context, AppState appState) {
-            if (appState is AppInitializedState) {
-              return DevicePreview.appBuilder(context, child);
-            } else if (appState is AppUninitializedState) {
-              return SizedBox.shrink();
-            } else {
-              return SizedBox.shrink();
-            }
-          },
-        );
-      },
-      title: 'CodeGrowers',
-      theme: mainTheme,
-      initialRoute: describeEnum(Routes.home),
-      navigatorKey: appNavigatorKey,
-      routes: routes,
+    return ScreenUtilInit(
+      designSize: Size(360, 640),
+      allowFontScaling: true,
+      child: MaterialApp(
+        locale: DevicePreview.of(context).locale,
+        localizationsDelegates: <LocalizationsDelegate<dynamic>>[
+          flutterI18nDelegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        builder: (BuildContext context, Widget child) {
+          return BlocBuilder<AppBloc, AppState>(
+            builder: (BuildContext context, AppState appState) {
+              if (appState is AppInitializedState) {
+                return DevicePreview.appBuilder(context, child);
+              } else if (appState is AppUninitializedState) {
+                return SizedBox.shrink();
+              } else {
+                return SizedBox.shrink();
+              }
+            },
+          );
+        },
+        title: 'CodeGrowers',
+        theme: mainTheme,
+        initialRoute: describeEnum(Routes.home),
+        navigatorKey: appNavigatorKey,
+        routes: routes,
+      ),
     );
   }
 }

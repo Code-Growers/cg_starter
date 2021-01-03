@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:gap/gap.dart';
-import 'package:cg_starter/extensions/double_extensions.dart';
+import 'package:cg_starter/extensions/extensions.dart';
 
 class GreetingsText extends StatelessWidget {
   @override

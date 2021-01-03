@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/screenutil.dart';
-
-Widget withScreenUtil(BuildContext context, Widget widget) {
-  ScreenUtil.init(context, designSize: Size(360, 640), allowFontScaling: true);
-  return widget;
-}
 
 final Map<String, double> _breakpoints = <String, double>{
   // iPhone SE
